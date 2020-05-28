@@ -103,5 +103,10 @@ function keyboard(ev) {
 
 window.onload = function() {
     var filename = window.location.hash.substr(1).split('&'); // substr(1) to remove the `#`
-    document.getElementById("filename").value = filename;
+    if (filename != "") {
+        document.getElementById("filename").value = filename;
+        load();
+    }
 }
+
+window.onhashchange = window.onload;
