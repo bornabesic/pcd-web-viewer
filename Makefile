@@ -8,3 +8,6 @@ three.js:
 
 serve: three.js
 	python3 -m http.server $(port)
+
+clean:
+	rm -rf pcd/*
